@@ -25,7 +25,7 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry):
     )
     if unload_ok:
         client = hass.data[DOMAIN][entry.entry_id]["client"]
-        await client.session.close()
+        await client.session_close()
 
         hass.data[DOMAIN].pop(entry.entry_id)
 

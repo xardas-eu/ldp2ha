@@ -13,6 +13,9 @@ class LedDimmerPro(object):
     def __init__(self, ip):
         self.client = LDPAPIClient(ip)
 
+    def session_close(self):
+        self.client.session_close()
+
     def simulate(self, sim: bool = True):
         self.client.simulate(sim)
 
