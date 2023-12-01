@@ -1,0 +1,10 @@
+# Ignore everything
+*
+
+# Except custom_components
+!custom_components/
+# Allow everything inside custom_components
+!custom_components/**
+
+# But not pycache
+__pycache__/
